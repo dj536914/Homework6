@@ -1,3 +1,6 @@
+// Commented by Griffin Jones
+// dj536914@ohio.edu
+
 // Brock Ferrell
 // CS2401
 // November 23, 2015
@@ -9,8 +12,13 @@ enum color {black, white, blank};
 
 class piece {
 public:
+	///
+	/// Sets the default piece value to blank
+	///
 	piece() {theColor = blank;}
-
+	///
+	/// Flips a board peice to the other color
+	///
 	void flip()
 	{
 		if (theColor == white) {
@@ -33,4 +41,3 @@ private:
 };
 
 #endif
-

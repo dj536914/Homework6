@@ -1,3 +1,6 @@
+// Commented by Griffin Jones
+// dj536914@ohio.edu
+
 // File: game.h (part of the namespace main_savitch_14)
 
 
@@ -85,4 +88,3 @@ private:
 }
 
 #endif
-

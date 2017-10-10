@@ -1,3 +1,6 @@
+// Commented by Griffin Jones
+// dj536914@ohio.edu
+
 //***********************************************************
 //
 //  File:     colors.h
@@ -29,7 +32,9 @@
 
 #include <string>
 using namespace std;
-
+///
+/// Creates shortcuts for colors to appear in the terminal or command prompt
+///
 const string BLINK     = "\e[5m";          //don't use this your
 					   //professor will probibly
 					   //beat you to death if
@@ -60,4 +65,3 @@ const string B_CYAN    = "\e[46m";
 const string B_WHITE   = "\e[47m";
 
 #endif //COLORS_H
-

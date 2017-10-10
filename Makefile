@@ -1,4 +1,5 @@
-all: othello main.o game.o othello.o archive
+all: othello main.o game.o othello.o doc
+build: othello main.o game.o othello.o
 othello: main.o game.o othello.o
 	g++ -o othello main.o game.o othello.o
 main.o: main.cc
@@ -11,4 +12,6 @@ archive:
 	tar -cf archive.tar colors.h game.cc game.h main.cc Makefile othello.cc \
 		othello.h piece.h
 clean:
-	\rm *.o archive.tar
+	\rm *.o othello
+doc:
+	doxygen config.txt

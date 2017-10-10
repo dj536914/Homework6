@@ -1,3 +1,6 @@
+// Commented by Griffin Jones
+// dj536914@ohio.edu
+
 // File: game.cxx
 
 #include <cassert>    // Provides assert
@@ -16,7 +19,10 @@ namespace main_savitch_14
 
 //*************************************************************************
 // PUBLIC MEMBER FUNCTIONS
-
+///
+/// Resets the board to the starting position and alternates between human and
+/// computer turns until the game is ended
+///
 game::who game::play( )
 // The play function should not be overridden. It plays one round of the
 // game, with the human player moving first and the computer second.
@@ -44,12 +50,18 @@ game::who game::play( )
 
 //*************************************************************************
 // OPTIONAL VIRTUAL FUNCTIONS (overriding these functions is optional)
-
+///
+/// Displays a message to the screen
+///
 void game::display_message(const string& message) const
 {
 	cout << message;
 }
 
+///
+/// Prompts the user to enter a move
+/// @return		answer: two character string with user's move
+///
 string game::get_user_move( ) const
 {
 	string answer;
@@ -59,7 +71,10 @@ string game::get_user_move( ) const
 	getline(cin, answer);
 	return answer;
 }
-
+///
+/// Determines who is winning at the current statement
+/// @return		last_mover(), next_mover(), or NEUTRAL
+///
 game::who game::winning()const {
 
 	int value = evaluate();
@@ -76,7 +91,11 @@ game::who game::winning()const {
 
 //*************************************************************************
 // PRIVATE FUNCTIONS (these are the same for every game)
-
+///
+/// Evaluates which move is the best move to take in a given turn recursively
+/// @param		look_ahead	Number of turns ahead to evaluate
+/// @param 		beat_this		The score needed to overcome
+///
 int game::eval_with_lookahead(int look_ahead, int beat_this)
 // Evaluate a board position with lookahead.
 // --int look_aheads:  How deep the lookahead should go to evaluate the move.
@@ -124,7 +143,9 @@ int game::eval_with_lookahead(int look_ahead, int beat_this)
 	// The answer we return should be from player's perspective, so multiply times -1:
 	return -best_value;
 }
-
+///
+/// Computes all possible moves, determines which one is the best, and runs it
+///
 void game::make_computer_move( )
 {
 	queue<string> moves;
@@ -157,7 +178,9 @@ void game::make_computer_move( )
 	// Make the best move.
 	make_move(best_move);
 }
-
+///
+/// Retrieves the user's move, determines if it is legal, and makes it.
+///
 void game::make_human_move( ) {
 	string move;
 
@@ -171,6 +194,3 @@ void game::make_human_move( ) {
 }
 
 }
-
-
-

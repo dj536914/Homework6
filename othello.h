@@ -1,3 +1,6 @@
+// Commented by Griffin Jones
+// dj536914@ohio.edu
+
 // Brock Ferrell
 // CS2401
 // November 23, 2015
@@ -46,5 +49,3 @@ private:
 }
 
 #endif
-
-
